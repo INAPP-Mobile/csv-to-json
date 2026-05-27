@@ -32,6 +32,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full text-white" style={{background: "var(--bg-body)"}}>
+        <link rel="stylesheet" href="https://freeq.one/theme.css" />
         <script dangerouslySetInnerHTML={{ __html: '(function(){var t=localStorage.getItem("freeq-theme")||"dark";document.documentElement.setAttribute("data-theme",t);})()' }} />
         <ThemeToggle />
         {children}
