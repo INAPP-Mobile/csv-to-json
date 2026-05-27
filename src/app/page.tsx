@@ -69,6 +69,33 @@ function truncate(str: string, len: number): string {
   return str.slice(0, len) + "...";
 }
 
+function ContentSection() {
+  return (
+    <section className="max-w-3xl mx-auto mt-16 space-y-8 text-gray-300 text-sm leading-relaxed">
+      <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6 space-y-4">
+        <h2 className="text-lg font-semibold text-white">About This Tool</h2>
+        <p>Convert CSV data to JSON format and vice versa. Supports configurable delimiters, header row detection, and file upload for bulk conversion.</p>
+        <h3 className="text-base font-semibold text-white">Common Use Cases</h3>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Converting spreadsheet exports to JSON for web applications</li>
+          <li>Preparing data for API consumption and integration</li>
+          <li>Migrating data between different storage formats</li>
+          <li>Transforming database dumps into structured JSON</li>
+        </ul>
+        <h3 className="text-base font-semibold text-white">Pro Tips</h3>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Enable or disable first row as headers depending on your data</li>
+          <li>Use tab delimiter for data containing commas</li>
+          <li>Preview output before downloading to verify conversion</li>
+        </ul>
+        <p className="text-gray-400 text-xs mt-4">
+          Part of the <a href="https://freeq.one" className="text-blue-400 hover:underline">FreeQ.One</a> tools suite. Also try our <a href="https://json.freeq.one" className="text-blue-400 hover:underline">JSON formatter</a>.
+        </p>
+      </div>
+    </section>
+  )
+}
+
 const INPUT_STORAGE_KEY = "csv-input";
 const MODE_STORAGE_KEY = "csv-mode";
 const DELIMITER_STORAGE_KEY = "csv-delimiter";
@@ -681,6 +708,8 @@ export default function Home() {
           </p>
         </div>
       </div>
+
+      <ContentSection />
 
       <Script
         async
