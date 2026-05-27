@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ThemeToggle from "@freeqone/ui-theme/ThemeToggle";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -33,8 +32,8 @@ export default function RootLayout({
     >
       <body className="min-h-full text-white" style={{background: "var(--bg-body)"}}>
         <link rel="stylesheet" href="https://freeq.one/theme.css" />
+        <script src="https://freeq.one/theme-toggle.js"></script>
         <script dangerouslySetInnerHTML={{ __html: '(function(){var t=localStorage.getItem("freeq-theme")||"dark";document.documentElement.setAttribute("data-theme",t);})()' }} />
-        <ThemeToggle />
         {children}
         <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
       </body>
