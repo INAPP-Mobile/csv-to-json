@@ -1,24 +1,4 @@
-
-:root {
-  --bg-body: #111827;
-  --bg-primary: #111827;
-  --bg-secondary: #1f2937;
-  --bg-card: #1f2937;
-  --text-primary: #f9fafb;
-  --text-secondary: #9ca3af;
-  --border-color: #374151;
-  --input-bg: #1f2937;
-}
-[data-theme="light"] {
-  --bg-body: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --bg-primary: #f9fafb;
-  --bg-secondary: #ffffff;
-  --bg-card: #ffffff;
-  --text-primary: #111827;
-  --text-secondary: #6b7280;
-  --border-color: #e5e7eb;
-  --input-bg: #ffffff;
-}
+@import "@freeqone/ui-theme/globals.css";
 @import "tailwindcss";
 
 @theme inline {
@@ -26,10 +6,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
-body {
-  background: var(--bg-body);
-  color: #f9fafb;
+
+[data-theme="light"] .bg-gray-800 textarea,
+[data-theme="light"] .bg-gray-800 input {
+  background: #fff;
+  border-color: #d1d5db;
+  color: #1f2937;
 }
+
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -44,130 +28,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #6b7280;
 }
-
-/* light overrides */
-
-[data-theme="light"] body {
-  color: #1f2937;
-}
-[data-theme="light"] .bg-gray-900 {
-  background: transparent;
-}
-[data-theme="light"] .bg-gray-800 {
-  background: rgba(255,255,255,0.95);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  border-color: rgba(255,255,255,0.3);
-}
-[data-theme="light"] .bg-gray-800\/50 {
-  background: rgba(255,255,255,0.85);
-}
-/* Buttons */
-[data-theme="light"] .bg-gray-700 {
-  background: #e5e7eb;
-  color: #374151;
-}
-[data-theme="light"] .hover\:bg-gray-600:hover {
-  background: #d1d5db !important;
-}
-[data-theme="light"] .hover\:bg-gray-700\/50:hover {
-  background: #f3f4f6;
-}
-[data-theme="light"] .hover\:bg-green-600:hover {
-  background: #059669 !important;
-  color: #fff !important;
-}
-[data-theme="light"] .hover\:bg-red-600:hover {
-  background: #dc2626 !important;
-  color: #fff !important;
-}
-[data-theme="light"] .hover\:bg-blue-600:hover {
-  background: #2563eb !important;
-  color: #fff !important;
-}
-[data-theme="light"] .hover\:bg-purple-600:hover {
-  background: #9333ea !important;
-  color: #fff !important;
-}
-/* Active/selected state buttons */
-[data-theme="light"] .bg-blue-600 {
-  background: #2563eb;
-  color: #fff;
-}
-/* Text colors */
-[data-theme="light"] .text-white {
-  color: #1f2937;
-}
-[data-theme="light"] .text-gray-300 {
-  color: #374151;
-}
-[data-theme="light"] .text-gray-400 {
-  color: #6b7280;
-}
-[data-theme="light"] .text-gray-500 {
-  color: #9ca3af;
-}
-[data-theme="light"] .text-blue-400 {
-  color: #2563eb;
-}
-/* Mode badge colors */
-[data-theme="light"] .bg-blue-900\/50 {
-  background: #dbeafe;
-  color: #1e40af;
-}
-[data-theme="light"] .bg-green-900\/50 {
-  background: #d1fae5;
-  color: #065f46;
-}
-[data-theme="light"] .bg-red-900\/50 {
-  background: #fee2e2;
-  color: #991b1b;
-}
-[data-theme="light"] .bg-yellow-900\/20 {
-  background: #fef3c7;
-  border-color: #f59e0b;
-}
-[data-theme="light"] .text-green-400 {
-  color: #059669;
-}
-[data-theme="light"] .text-red-400 {
-  color: #dc2626;
-}
-[data-theme="light"] .text-yellow-300 {
-  color: #d97706;
-}
-[data-theme="light"] .text-blue-300 {
-  color: #1e40af;
-}
-[data-theme="light"] .text-green-300 {
-  color: #065f46;
-}
-/* Borders */
-[data-theme="light"] .border-gray-700 {
-  border-color: #e5e7eb;
-}
-[data-theme="light"] .border-gray-700\/50 {
-  border-color: #e5e7eb;
-}
-[data-theme="light"] .border-green-800 {
-  border-color: #86efac;
-}
-[data-theme="light"] .border-red-800 {
-  border-color: #fca5a5;
-}
-[data-theme="light"] .border-yellow-800\/50 {
-  border-color: #fde68a;
-}
-/* Inputs */
-[data-theme="light"] .placeholder-gray-500::placeholder {
-  color: #9ca3af;
-}
-[data-theme="light"] .bg-gray-800 textarea,
-[data-theme="light"] .bg-gray-800 input {
-  background: #fff;
-  border-color: #d1d5db;
-  color: #1f2937;
-}
-/* Scrollbar */
 [data-theme="light"] ::-webkit-scrollbar-track {
   background: #e5e7eb;
 }
@@ -176,8 +36,4 @@ body {
 }
 [data-theme="light"] ::-webkit-scrollbar-thumb:hover {
   background: #6b7280;
-}
-/* Focus ring */
-[data-theme="light"] .focus\:ring-blue-500:focus {
-  --tw-ring-color: #3b82f6;
 }

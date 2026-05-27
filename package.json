@@ -11,6 +11,7 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
+    "@freeqone/ui-theme": "github:INAPP-Mobile/freeqone-ui-theme",
     "firebase": "^12.13.0",
     "lucide-react": "^1.16.0",
     "next": "16.2.6",
