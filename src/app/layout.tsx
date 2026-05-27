@@ -31,7 +31,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full bg-gray-900 text-white">
+      <body className="min-h-full text-white" style={{background: "var(--bg-body)"}}>
         <script dangerouslySetInnerHTML={{ __html: '(function(){var t=localStorage.getItem("freeq-theme")||"dark";document.documentElement.setAttribute("data-theme",t);})()' }} />
         <ThemeToggle />
         {children}

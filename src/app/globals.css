@@ -1,5 +1,6 @@
 
 :root {
+  --bg-body: #111827;
   --bg-primary: #111827;
   --bg-secondary: #1f2937;
   --bg-card: #1f2937;
@@ -9,6 +10,7 @@
   --input-bg: #1f2937;
 }
 [data-theme="light"] {
+  --bg-body: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --bg-primary: #f9fafb;
   --bg-secondary: #ffffff;
   --bg-card: #ffffff;
@@ -25,7 +27,7 @@
 }
 
 body {
-  background: var(--bg-primary);
+  background: var(--bg-body);
   color: #f9fafb;
 }
 
@@ -48,7 +50,10 @@ body {
 [data-theme="light"] body {
   color: #111827;
 }
-[data-theme="light"] .text-gray-300, 
+[data-theme="light"] .text-gray-300 {
+  color: #374151;
+}
+[data-theme="light"] .text-gray-400, 
 [data-theme="light"] .text-gray-400 {
   color: #6b7280;
 }
@@ -56,7 +61,7 @@ body {
   color: #9ca3af;
 }
 [data-theme="light"] .bg-gray-900 {
-  background-color: #f9fafb;
+  background: transparent;
 }
 [data-theme="light"] .bg-gray-800 {
   background-color: #ffffff;
