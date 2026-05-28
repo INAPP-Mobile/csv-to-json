@@ -33,8 +33,8 @@ export default function RootLayout({
       <body className="min-h-full text-white" style={{background: "var(--bg-body)"}}>
         <link rel="stylesheet" href="https://freeq.one/theme.css" />
         <script defer src="https://freeq.one/theme-toggle.js" />
+        <button id="theme-toggle-btn" aria-label="Toggle theme" suppressHydrationWarning className="fixed top-4 right-4 z-50 w-9 h-9 flex items-center justify-center rounded-full border text-sm cursor-pointer" style={{borderColor:"rgba(255,255,255,0.2)",background:"rgba(55,65,81,0.8)",color:"#fff",lineHeight:"1"}}>{"\u263E"}</button>
         <script dangerouslySetInnerHTML={{ __html: '(function(){var t;try{t=localStorage.getItem("freeq-theme")}catch(e){}t=t||"dark";document.documentElement.setAttribute("data-theme",t);var b=document.getElementById("theme-toggle-btn");if(b)b.textContent=t==="dark"?"\u263E":"\u2600";})()' }} />
-        <button id="theme-toggle-btn" aria-label="Toggle theme" className="fixed top-4 right-4 z-50 w-9 h-9 flex items-center justify-center rounded-full border text-sm cursor-pointer" style={{borderColor:"rgba(255,255,255,0.2)",background:"rgba(55,65,81,0.8)",color:"#fff",lineHeight:"1"}} />
         {children}
         <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
       </body>
